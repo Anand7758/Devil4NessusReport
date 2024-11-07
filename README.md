@@ -29,7 +29,41 @@
    Clone this repository or download the ZIP file:
    ```bash
     https://github.com/Anand7758/Devil4NessusReport.git
-## Setting Up Execution Policy
-To allow the script to run, open PowerShell as an administrator and set the execution policy:
+> ### Setting Up Execution Policy
+> To allow the script to run, open PowerShell as an administrator and set the execution policy:
+> 
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+> 
+> This command permits the script to run without restrictions for the current user.
 
-``powershell  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ### Usage Instructions
+> Open PowerShell and navigate to the directory containing the `Devil4NessusReport.ps1` script.
+> 
+> Run the following command, replacing the example paths with your own:
+> 
+> ```powershell
+> .\Devil4NessusReport.ps1 -InputPath "Path\to\your\nessus\files" -OutputPath "Path\to\save\merged\report"
+> ```
+> 
+> - **`-InputPath`**: The folder containing the `.nessus` files you want to merge.
+> - **`-OutputPath`**: The destination path and filename where the merged report will be saved.
+
+> ### Example Command
+> To merge all `.nessus` files in `C:\Scans\NessusFiles` and save the output as `MergedReport.nessus` in `C:\Reports`, use:
+> 
+> ```powershell
+> .\Devil4NessusReport.ps1 -InputPath "C:\Scans\NessusFiles" -OutputPath "C:\Reports\MergedReport.nessus"
+> ```
+
+## Viewing the Merged Report
+Once the script completes, navigate to the specified `OutputPath` to find and review the merged `.nessus` report file.
+
+## Troubleshooting
+If you encounter issues running the script, ensure:
+- The PowerShell execution policy is set correctly.
+- The `InputPath` contains `.nessus` files.
+- You have permissions to read from the `InputPath` and write to the `OutputPath`.
+
+---
