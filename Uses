@@ -1,0 +1,19 @@
+To use the script, open PowerShell with permissions to run scripts. If required, set the execution policy with:
+
+powershell
+Copy code
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Navigate to the directory containing Devil4NessusReport.ps1 and run the following command:
+
+powershell
+Copy code
+.\Devil4NessusReport.ps1 -InputPath "Path\to\your\nessus\files" -OutputPath "Path\to\save\merged\report"
+-InputPath: Folder containing the .nessus files to merge.
+-OutputPath: Destination for the merged report file.
+Example Command
+For example, to merge all .nessus files in C:\Scans\NessusFiles and save the result as MergedReport.nessus in C:\Reports, use:
+
+powershell
+Copy code
+.\Devil4NessusReport.ps1 -InputPath "C:\Scans\NessusFiles" -OutputPath "C:\Reports\MergedReport.nessus"
+After the script completes, navigate to the specified OutputPath to view the merged .nessus report.
