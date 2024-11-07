@@ -29,3 +29,7 @@
    Clone this repository or download the ZIP file:
    ```bash
     https://github.com/Anand7758/Devil4NessusReport.git
+## Setting Up Execution Policy
+To allow the script to run, open PowerShell as an administrator and set the execution policy:
+
+``powershell  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
